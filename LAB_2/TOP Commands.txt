@@ -1,0 +1,19 @@
+show run
+config t
+
+line console 0
+	password …
+	login
+exit
+
+enable pass …
+enable secret …..
+service password-encryption
+banner motd "…"
+
+copy running-config startup-config (copy run start)
+
+——
+interface vlan 1
+	ip address
+	no shutdown
